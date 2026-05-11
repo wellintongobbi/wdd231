@@ -1,0 +1,219 @@
+/* ---- Tablet: 640px and up ---- */
+@media screen and (min-width: 640px) {
+
+  /* Header */
+  .header-inner {
+    padding: 0.85rem 2rem;
+  }
+
+  .site-name {
+    font-size: 1.45rem;
+  }
+
+  /* Navigation: horizontal */
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    max-height: none !important;
+    overflow: visible;
+    background: var(--clr-primary-dk);
+    border-bottom: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav ul li a {
+    padding: 0.7rem 1.25rem;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus {
+    background: rgba(220, 20, 60, 0.2);
+    border-bottom-color: var(--clr-primary-lt);
+    border-left-color: transparent;
+    color: var(--clr-primary-lt);
+  }
+
+  nav ul li a.active {
+    border-bottom-color: var(--clr-primary-lt);
+    border-left-color: transparent;
+    color: var(--clr-primary-lt);
+    background: rgba(220, 20, 60, 0.15);
+  }
+
+  /* Main */
+  main {
+    padding: 2rem 2rem 2.5rem;
+  }
+
+  /* Grid: 2-col for about + photo on tablet */
+  .main-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "about photo"
+      "courses courses";
+  }
+
+  .about-section  { grid-area: about;   }
+  .photo-section  { grid-area: photo;   }
+  .courses-section { grid-area: courses; }
+
+  /* Course list: 2 columns on tablet */
+  .course-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Filter buttons wider */
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Footer: row on tablet */
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+}
+
+/* ---- Desktop: 900px and up ---- */
+@media screen and (min-width: 900px) {
+
+  .header-inner {
+    padding: 0.9rem 3rem;
+  }
+
+  .site-name {
+    font-size: 1.6rem;
+  }
+
+  nav ul {
+    padding: 0 1rem;
+  }
+
+  nav ul li a {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 2.5rem 3rem 3rem;
+  }
+
+  main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  /* 3-column grid on desktop: about takes 2 cols, photo 1 col */
+  .main-grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "about photo"
+      "courses courses";
+    gap: 2rem;
+  }
+
+  /* About section padding */
+  .about-section p {
+    padding: 1.25rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* Photo placeholder larger */
+  .photo-placeholder {
+    padding: 2.5rem 1.5rem;
+    min-height: 200px;
+  }
+
+  .photo-placeholder svg {
+    width: 180px;
+    height: 180px;
+  }
+
+  /* Course list: 3 columns on desktop */
+  .course-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.65rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .course-card {
+    padding: 0.6rem 1rem;
+    font-size: 0.92rem;
+  }
+
+  /* Filter buttons */
+  .filter-buttons {
+    padding: 0.85rem 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .filter-btn {
+    padding: 0.55rem 1.25rem;
+    font-size: 0.92rem;
+  }
+
+  .credits-total {
+    padding: 0.75rem 1.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  .footer-inner {
+    padding: 0 2rem;
+  }
+
+  .social-links a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-links svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-info p {
+    font-size: 0.92rem;
+  }
+
+  .footer-modified p {
+    font-size: 0.85rem;
+  }
+
+}
+
+/* ---- Large Desktop: 1200px and up ---- */
+@media screen and (min-width: 1200px) {
+
+  main {
+    padding: 3rem 4rem 3.5rem;
+  }
+
+  .main-grid {
+    gap: 2.5rem;
+  }
+
+}

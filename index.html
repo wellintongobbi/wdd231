@@ -1,17 +1,155 @@
-<!--https://wellintongobbi.github.io/wdd231/-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random title</title>
-    <link rel="stylesheet" href="styles/normalize.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="WDD231 Course Home Page – Web Frontend Development I, showcasing student profile, course progress, and web certificate courses." />
+  <meta name="author" content="Wellinton Allan Gobbi" />
+  <title>WDD231 | Web Frontend Development</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <!-- JS -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
 </head>
 
 <body>
-    <h1>a feel words</h1>
-    <p>Just for test</p>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-area">
+        <svg class="site-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" aria-label="Site Logo" role="img">
+          <rect width="60" height="60" rx="8" fill="#8B0000" />
+          <polygon points="30,8 52,22 52,50 30,50 8,50 8,22" fill="none" stroke="#FF6B6B" stroke-width="2.5" />
+          <polygon points="30,16 46,26 46,46 30,46 14,46 14,26" fill="#DC143C" opacity="0.5" />
+          <text x="30" y="36" text-anchor="middle" font-family="serif" font-size="14" font-weight="bold"
+            fill="#fff">W</text>
+        </svg>
+        <span class="site-name">WDD231</span>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav id="primary-nav" aria-label="Primary navigation">
+    <ul role="list">
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="chamber/index.html">Chamber Project</a></li>
+      <li><a href="final/index.html">Final Project</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <h1>Home</h1>
+
+    <div class="main-grid">
+
+      <!-- About Me Section -->
+      <section class="about-section" aria-labelledby="about-heading">
+        <h2 id="about-heading">About Me</h2>
+        <p>
+          Hello! I'm a passionate web development student working toward the Software Development degree,
+          with a focus on the Web and Computer Programming certificate. I love crafting elegant, accessible,
+          and performant user interfaces. Through WDD231, I'm building the foundation for real-world
+          frontend development — from semantic HTML to dynamic JavaScript and responsive CSS layouts.
+          I believe great web experiences start with intentional design and clean code.
+        </p>
+      </section>
+
+      <!-- Student Photo Section -->
+      <section class="photo-section" aria-labelledby="photo-heading">
+        <h2 id="photo-heading">Student Photo</h2>
+        <div class="photo-placeholder" role="img" aria-label="Student profile photo placeholder">
+          <img src="images/profile.jpeg">
+        </div>
+      </section>
+
+      <!-- Web Certificate Courses Section -->
+      <section class="courses-section" aria-labelledby="courses-heading">
+        <h2 id="courses-heading">Web Certificate Courses</h2>
+
+        <div class="filter-buttons" role="group" aria-label="Filter courses by type">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="CSE" aria-pressed="false">CSE</button>
+          <button class="filter-btn" data-filter="WDD" aria-pressed="false">WDD</button>
+        </div>
+
+        <div class="course-list" id="course-list" aria-live="polite" aria-label="Course list"></div>
+
+        <p class="credits-total" id="credits-total" aria-live="polite">
+          The total credits for courses listed above is <strong id="credits-number">0</strong>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://github.com/wellintongobbi" target="_blank" rel="noopener noreferrer"
+          aria-label="GitHub Profile">
+          <!-- GitHub Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.72.08-.72 1.2.08 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48.99.1-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/wellinton-allan-gobbi-3621a415b/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn Profile">
+          <!-- LinkedIn Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z" />
+          </svg>
+        </a>
+        <a href="https://x.com/WellintonGobbi" target="_blank" rel="noopener noreferrer"
+          aria-label="Twitter / X Profile">
+          <!-- X/Twitter Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Copyright Info -->
+      <div class="footer-info">
+        <p>
+          &copy; <span id="currentyear"></span> &bull; Wellinton Allan Gobbi &bull; Brazil
+        </p>
+      </div>
+
+      <!-- Last Modified -->
+      <div class="footer-modified">
+        <p id="lastModified"></p>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
 
 </html>
