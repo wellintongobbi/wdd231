@@ -1,3 +1,4 @@
+/* --- CSS Variables --- */
 :root {
   --clr-primary: #DC143C;
   --clr-primary-dk: #8B0000;
@@ -143,6 +144,7 @@ nav {
   overflow: hidden;
   max-height: 0;
   transition: max-height 300ms ease;
+  color: #FAF7F5;
 }
 
 nav.open {
@@ -157,7 +159,7 @@ nav ul {
 
 nav ul li a {
   display: block;
-  color: #FAF7F5;
+  color: #FAF7F5 !important;
   padding: 0.75rem 1.25rem;
   font-weight: 500;
   font-size: 1rem;
