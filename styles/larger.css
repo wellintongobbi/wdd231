@@ -48,10 +48,10 @@
   }
 
   nav ul li a.active {
-    border-bottom-color: var(--clr-primary-lt);
+    border-bottom-color: #fff;
     border-left-color: transparent;
-    color: var(--clr-primary-lt);
-    background: rgba(220, 20, 60, 0.15);
+    color: #fff;
+    background: var(--clr-primary);
   }
 
   /* Main */
@@ -67,9 +67,17 @@
       "courses courses";
   }
 
-  .about-section  { grid-area: about;   }
-  .photo-section  { grid-area: photo;   }
-  .courses-section { grid-area: courses; }
+  .about-section {
+    grid-area: about;
+  }
+
+  .photo-section {
+    grid-area: photo;
+  }
+
+  .courses-section {
+    grid-area: courses;
+  }
 
   /* Course list: 2 columns on tablet */
   .course-list {
