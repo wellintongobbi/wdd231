@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Horizonte Tech Solutions",
+    "address": "1200 United Nations Ave, São Paulo, SP 04578-000",
+    "phone": "(11) 3456-7890",
+    "website": "https://horizontetech.com.br",
+    "image": "horizonte-tech.webp",
+    "membershipLevel": 3,
+    "description": "Leading company in digital transformation and custom software development.",
+    "founded": 2010
+  },
+  {
+    "name": "Verde & Healthy Organics",
+    "address": "340 Flowers St, Curitiba, PR 80050-200",
+    "phone": "(41) 2987-6543",
+    "website": "https://verdehealthy.com.br",
+    "image": "verde-saudavel.webp",
+    "membershipLevel": 2,
+    "description": "Certified organic food supplier for restaurants and grocery markets.",
+    "founded": 2015
+  },
+  {
+    "name": "Alvorada Construction Co.",
+    "address": "75 Senator Dantas St, Rio de Janeiro, RJ 20031-201",
+    "phone": "(21) 3321-9988",
+    "website": "https://alvoradaconstructions.com.br",
+    "image": "alvorada.webp",
+    "membershipLevel": 3,
+    "description": "Construction company with over 30 years of experience in residential and commercial projects.",
+    "founded": 1993
+  },
+  {
+    "name": "Mountain Flavor Catering",
+    "address": "890 Gonçalves Dias St, Belo Horizonte, MG 30140-091",
+    "phone": "(31) 3456-1122",
+    "website": "https://mountainflavorcatering.com.br",
+    "image": "sabor-serra.webp",
+    "membershipLevel": 1,
+    "description": "Restaurant and catering service specializing in traditional Brazilian cuisine.",
+    "founded": 2018
+  },
+  {
+    "name": "Eagle Logistics & Transport",
+    "address": "Anhanguera Hwy, km 47, Jundiaí, SP 13210-000",
+    "phone": "(11) 4522-3344",
+    "website": "https://eaglelogistics.com.br",
+    "image": "aguia-logistica.webp",
+    "membershipLevel": 2,
+    "description": "Complete transportation and warehousing solutions for e-commerce and industry.",
+    "founded": 2008
+  },
+  {
+    "name": "WellBeing Health Clinic",
+    "address": "1500 Boa Viagem Ave, Recife, PE 51021-000",
+    "phone": "(81) 3298-4455",
+    "website": "https://wellbeinghealthclinic.com.br",
+    "image": "clinica-bemestar.webp",
+    "membershipLevel": 2,
+    "description": "Multidisciplinary clinic focused on preventive health and integral wellness.",
+    "founded": 2012
+  },
+  {
+    "name": "InovaEdu Online Learning",
+    "address": "405 L2 South Ave, Brasília, DF 70070-920",
+    "phone": "(61) 3322-7766",
+    "website": "https://inovaedu.com.br",
+    "image": "inovaedu.webp",
+    "membershipLevel": 1,
+    "description": "Online course platform and corporate training programs for the Brazilian market.",
+    "founded": 2020
+  },
+  {
+    "name": "Strong Steel Metalworks",
+    "address": "200 Industrial St, Santo André, SP 09110-101",
+    "phone": "(11) 4499-8877",
+    "website": "https://strongsteelworks.ind.br",
+    "image": "forte-aco.webp",
+    "membershipLevel": 3,
+    "description": "Manufacturing of metal parts and structures for civil construction and industry.",
+    "founded": 1985
+  }
+]

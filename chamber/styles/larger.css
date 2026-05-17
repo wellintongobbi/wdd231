@@ -1,0 +1,169 @@
+/* ===========================
+   CHAMBER OF COMMERCE — larger.css
+   Responsive styles for screens >= 640px
+   =========================== */
+
+/* ---------- 640px+ (Tablets) ---------- */
+@media (min-width: 640px) {
+  #site-header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  .header-branding {
+    justify-content: flex-start;
+  }
+
+  .header-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .header-title h1 {
+    font-size: 1.6rem;
+  }
+
+  .header-title p {
+    font-size: 0.85rem;
+  }
+
+  /* Nav: horizontal on tablet+ */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    border-top: none;
+    padding: 0 var(--space-xl);
+  }
+
+  .nav-menu li a {
+    border-bottom: none;
+    border-right: 1px solid rgba(255,255,255,0.07);
+    padding: var(--space-md) var(--space-lg);
+    font-size: 0.9rem;
+  }
+
+  .nav-menu li a.active {
+    border-left: none;
+    border-bottom: 3px solid var(--color-secondary);
+    padding-left: var(--space-lg);
+    padding-bottom: calc(var(--space-md) - 3px);
+  }
+
+  .nav-menu li a:hover,
+  .nav-menu li a:focus {
+    border-bottom: 3px solid rgba(200,146,42,0.5);
+    padding-bottom: calc(var(--space-md) - 3px);
+  }
+
+  /* Hero */
+  .page-hero {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  .page-hero h2 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  /* Grid: 2 columns */
+  .members-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Controls */
+  .directory-controls {
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  /* List: more columns */
+  .member-list-item {
+    grid-template-columns: 1fr 1fr auto;
+    gap: var(--space-md);
+  }
+
+  .list-item-address {
+    max-width: none;
+    white-space: normal;
+  }
+
+  /* Footer */
+  .footer-grid {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .footer-contact,
+  .footer-dev {
+    flex: 1;
+    min-width: 180px;
+  }
+}
+
+/* ---------- 900px+ (Desktop) ---------- */
+@media (min-width: 900px) {
+  .header-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .header-title h1 {
+    font-size: 1.9rem;
+  }
+
+  /* Grid: 3 columns */
+  .members-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .members-container {
+    padding: var(--space-xl);
+  }
+
+  .page-hero h2 {
+    font-size: 2.4rem;
+  }
+
+  .page-hero p {
+    font-size: 1.05rem;
+    max-width: 55ch;
+  }
+
+  .card-img-placeholder {
+    transition: transform var(--transition);
+  }
+
+  .member-card:hover .card-img-placeholder {
+    transform: scale(1.05);
+  }
+}
+
+/* ---------- 1200px+ (Wide Desktop) ---------- */
+@media (min-width: 1200px) {
+  .members-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #site-header {
+    padding: var(--space-lg) var(--space-2xl);
+  }
+
+  .nav-menu {
+    padding: 0 var(--space-2xl);
+  }
+}
