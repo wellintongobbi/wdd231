@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Welcome to the Chamber of Commerce and Business Association. Join us to grow your business, connect with local leaders, and strengthen our community." />
+    <meta name="author" content="Wellinton Allan Gobbi" />
+    <title>Home | Chamber of Commerce</title>
+
+    <!-- Open Graph / Facebook Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Chamber of Commerce — Business &amp; Professional Association" />
+    <meta property="og:description"
+        content="Join us to grow your business, connect with local leaders, and strengthen our community." />
+    <meta property="og:image" content="https://wellintongobbi.github.io/wdd231/chamber/images/og-chamber.jpg" />
+    <meta property="og:url" content="https://wellintongobbi.github.io/wdd231/chamber/index.html" />
+    <meta property="og:site_name" content="Chamber of Commerce" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="images/favicon.png" type="image/png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <!-- CSS: normalize → small → larger -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+</head>
+
+<body>
+
+    <!-- Skip to main content -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- ═══════════════ HEADER ═══════════════ -->
+    <header id="site-header">
+        <div class="header-branding">
+            <img class="header-logo" src="images/favicon.svg" alt="Chamber of Commerce logo" width="70" height="70" />
+            <div class="header-title">
+                <h1>Chamber of Commerce</h1>
+                <p>Business &amp; Professional Association</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════ NAVIGATION ═══════════════ -->
+    <nav id="site-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+            Menu
+            <div class="hamburger" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
+        <ul class="nav-menu" id="main-menu" role="menubar">
+            <li role="none"><a href="index.html" role="menuitem" class="active" aria-current="page">Home</a></li>
+            <li role="none"><a href="directory.html" role="menuitem">Directory</a></li>
+            <li role="none"><a href="join.html" role="menuitem">Join</a></li>
+            <li role="none"><a href="discover.html" role="menuitem">Discover</a></li>
+            <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ═══════════════ MAIN ═══════════════ -->
+    <main id="main-content">
+
+        <!-- ── HERO ── -->
+        <section class="home-hero" aria-labelledby="hero-heading">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p class="hero-eyebrow">Welcome to Brasília</p>
+                <h2 id="hero-heading">Where Local Business<br />Comes Together</h2>
+                <p class="hero-sub">Connect, grow, and thrive with the region's most active business network.</p>
+                <a href="join.html" class="btn-cta">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- ── HOME GRID (weather + events + spotlights) ── -->
+        <div class="home-grid">
+
+            <!-- ── WEATHER ── -->
+            <section class="home-card weather-card" aria-labelledby="weather-heading">
+                <div class="card-header-bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"
+                        aria-hidden="true">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <h2 id="weather-heading">Weather — Brasília, DF</h2>
+                </div>
+
+                <div id="weather-current" class="weather-current" aria-live="polite">
+                    <div class="loading-spinner" role="status" aria-label="Loading weather..."></div>
+                </div>
+
+                <div class="forecast-label">3-Day Forecast</div>
+                <div id="weather-forecast" class="weather-forecast" aria-live="polite">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+            <!-- ── CURRENT EVENTS ── -->
+            <section class="home-card events-card" aria-labelledby="events-heading">
+                <div class="card-header-bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"
+                        aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                    <h2 id="events-heading">Current Events</h2>
+                </div>
+
+                <ul class="events-list">
+                    <li class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">14</span>
+                            <span class="event-month">Jun</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Annual Business Networking Gala</h3>
+                            <p>Join us for our flagship evening of connections, awards, and celebration. Black-tie
+                                optional.</p>
+                            <span class="event-tag">Networking</span>
+                        </div>
+                    </li>
+                    <li class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">21</span>
+                            <span class="event-month">Jun</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Small Business Workshop</h3>
+                            <p>Free half-day workshop covering digital marketing, accounting basics, and funding
+                                opportunities.</p>
+                            <span class="event-tag">Workshop</span>
+                        </div>
+                    </li>
+                    <li class="event-item">
+                        <div class="event-date">
+                            <span class="event-day">5</span>
+                            <span class="event-month">Jul</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Ribbon Cutting — New Members</h3>
+                            <p>Welcome our newest members with a public ribbon-cutting ceremony at the Chamber building.
+                            </p>
+                            <span class="event-tag">Ceremony</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="discover.html" class="events-more-link">View all events →</a>
+            </section>
+
+            <!-- ── SPOTLIGHTS ── -->
+            <section class="spotlights-section" aria-labelledby="spotlights-heading">
+                <div class="card-header-bar spotlights-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"
+                        aria-hidden="true">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <h2 id="spotlights-heading">Member Spotlights</h2>
+                </div>
+
+                <div id="spotlights-display" class="spotlights-grid" aria-live="polite">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+        </div><!-- /.home-grid -->
+
+    </main>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer id="site-footer">
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <h2>Chamber of Commerce</h2>
+                <p>Strengthening the local business community since 1985.</p>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <address>
+                    1000 Business Ave<br />
+                    Downtown, Brasília – DF<br />
+                    ZIP: 70040-010<br />
+                    <a href="tel:+556133001234" style="color:rgba(255,255,255,.7);">(61) 3300-1234</a><br />
+                    <a href="mailto:contact@chamberofcommerce.com" style="color:rgba(255,255,255,.7);">
+                        contact@chamberofcommerce.com
+                    </a>
+                </address>
+            </div>
+
+            <div class="footer-dev">
+                <h3>Development</h3>
+                <p>
+                    <strong class="footer-gold">Wellinton Allan Gobbi</strong><br />
+                    WDD 231 — Web Frontend Development I<br />
+                    Last modified: <span id="last-modified"></span>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            &copy; <span id="copyright-year"></span> Chamber of Commerce. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/home.js" defer></script>
+</body>
+
+</html>
