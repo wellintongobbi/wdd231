@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>amorae.mov — Site Plan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Courier+Prime:ital@0;1&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Courier+Prime:ital@0;1&family=Playfair+Display:ital@1&display=swap"
+    rel="stylesheet">
+  <meta property="og:url" content="https://wellintongobbi.github.io/wdd231/siteplan.html" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
-      --bg:     #f5f0e8;
-      --bg2:    #e8e0d0;
-      --text:   #2c2416;
-      --text2:  #6b5d4f;
-      --green:  #4a6741;
-      --wine:   #6e3d41;
-      --border: rgba(44,36,22,0.15);
+      --bg: #f5f0e8;
+      --bg2: #e8e0d0;
+      --text: #2c2416;
+      --text2: #6b5d4f;
+      --green: #4a6741;
+      --wine: #6e3d41;
+      --border: rgba(44, 36, 22, 0.15);
     }
 
     body {
@@ -43,7 +53,9 @@
       margin-bottom: 0.25rem;
     }
 
-    .logo span { color: var(--wine); }
+    .logo span {
+      color: var(--wine);
+    }
 
     header p {
       font-size: 0.7rem;
@@ -72,7 +84,9 @@
       transition: opacity 0.2s;
     }
 
-    nav a:hover { opacity: 1; }
+    nav a:hover {
+      opacity: 1;
+    }
 
     /* MAIN */
     main {
@@ -87,7 +101,9 @@
       border-bottom: 0.5px solid var(--border);
     }
 
-    section:last-child { border-bottom: none; }
+    section:last-child {
+      border-bottom: none;
+    }
 
     .section-label {
       font-size: 0.65rem;
@@ -106,7 +122,10 @@
       line-height: 1.2;
     }
 
-    h2 em { color: var(--wine); font-style: italic; }
+    h2 em {
+      color: var(--wine);
+      font-style: italic;
+    }
 
     p {
       color: var(--text2);
@@ -114,7 +133,10 @@
       margin-bottom: 0.75rem;
     }
 
-    strong { color: var(--text); font-weight: 600; }
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
 
     /* CARD */
     .card {
@@ -125,7 +147,9 @@
       margin-top: 1rem;
     }
 
-    .card p { margin-bottom: 0; }
+    .card p {
+      margin-bottom: 0;
+    }
 
     /* SCENARIOS */
     .scenario-list {
@@ -170,7 +194,10 @@
       border: 0.5px solid var(--border);
     }
 
-    .color-swatch { height: 80px; width: 100%; }
+    .color-swatch {
+      height: 80px;
+      width: 100%;
+    }
 
     .color-info {
       background: var(--bg2);
@@ -349,8 +376,13 @@
       height: 28px;
     }
 
-    .wf-desktop .wf-block.hero-img { height: 140px; }
-    .wf-desktop .wf-block.card-row { height: 90px; }
+    .wf-desktop .wf-block.hero-img {
+      height: 140px;
+    }
+
+    .wf-desktop .wf-block.card-row {
+      height: 90px;
+    }
 
     .wf-desktop-nav {
       display: flex;
@@ -368,7 +400,10 @@
       opacity: 0.6;
     }
 
-    .wf-nav-links { display: flex; gap: 0.4rem; }
+    .wf-nav-links {
+      display: flex;
+      gap: 0.4rem;
+    }
 
     .wf-nav-link {
       width: 36px;
@@ -399,8 +434,14 @@
       opacity: 0.3;
     }
 
-    .wf-line.short { width: 60%; }
-    .wf-line.title { height: 10px; opacity: 0.5; }
+    .wf-line.short {
+      width: 60%;
+    }
+
+    .wf-line.title {
+      height: 10px;
+      opacity: 0.5;
+    }
 
     /* FOOTER */
     footer {
@@ -413,22 +454,34 @@
       text-transform: uppercase;
     }
 
-    footer span { color: var(--wine); }
+    footer span {
+      color: var(--wine);
+    }
 
     /* RESPONSIVE */
     @media (max-width: 600px) {
-      .wireframe-grid { grid-template-columns: 1fr; }
-      .type-item { grid-template-columns: 1fr; }
+      .wireframe-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .type-item {
+        grid-template-columns: 1fr;
+      }
+
       .type-meta {
         border-right: none;
         border-bottom: 0.5px solid var(--border);
         padding-right: 0;
         padding-bottom: 0.75rem;
       }
-      nav { gap: 1rem; }
+
+      nav {
+        gap: 1rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -454,7 +507,11 @@
       <div class="card">
         <p><strong>amorae.mov</strong></p>
       </div>
-      <p style="margin-top:1rem;">The name <strong>amorae.mov</strong> blends the Italian word <em>amore</em> (love) with the <em>.mov</em> file extension, a format associated with cameras and cinema. This combination conveys the essence of the photographer's work: capturing genuine emotions through a cinematic lens, turning fleeting moments into lasting memories. The name is short, memorable, bilingual, and unique — ideal for digital branding.</p>
+      <p style="margin-top:1rem;">The name <strong>amorae.mov</strong> blends the Italian word <em>amore</em> (love)
+        with the <em>.mov</em> file extension, a format associated with cameras and cinema. This combination conveys the
+        essence of the photographer's work: capturing genuine emotions through a cinematic lens, turning fleeting
+        moments into lasting memories. The name is short, memorable, bilingual, and unique — ideal for digital branding.
+      </p>
       <p><strong>Suggested domain:</strong> amoraemov.com.br</p>
     </section>
 
@@ -464,13 +521,17 @@
       <h2>Site <em>Purpose</em></h2>
       <p>The website serves as a professional digital portfolio for the photographer, with three main purposes:</p>
       <div class="card" style="border-left-color: var(--green);">
-        <p><strong>1. Showcase the work.</strong> Display photographs organized by category (weddings, portrait sessions, events, and family), allowing potential clients to discover the photographer's style and quality.</p>
+        <p><strong>1. Showcase the work.</strong> Display photographs organized by category (weddings, portrait
+          sessions, events, and family), allowing potential clients to discover the photographer's style and quality.
+        </p>
       </div>
       <div class="card" style="border-left-color: var(--wine); margin-top:0.75rem;">
-        <p><strong>2. Communicate services.</strong> Provide clear information about the types of photography sessions available, conveying professionalism and building trust with new clients.</p>
+        <p><strong>2. Communicate services.</strong> Provide clear information about the types of photography sessions
+          available, conveying professionalism and building trust with new clients.</p>
       </div>
       <div class="card" style="border-left-color: var(--green); margin-top:0.75rem;">
-        <p><strong>3. Facilitate contact.</strong> Offer a contact and booking form that reduces the barrier between a client's interest and the actual hiring of the photographer's services.</p>
+        <p><strong>3. Facilitate contact.</strong> Offer a contact and booking form that reduces the barrier between a
+          client's interest and the actual hiring of the photographer's services.</p>
       </div>
     </section>
 
@@ -480,10 +541,12 @@
       <h2>Usage <em>Scenarios</em></h2>
       <p>Representative questions asked by site visitors that guide the content and features of the website:</p>
       <ul class="scenario-list">
-        <li>What types of photography does amorae.mov offer? Does the photographer work with weddings, couple sessions, portraits, and events?</li>
+        <li>What types of photography does amorae.mov offer? Does the photographer work with weddings, couple sessions,
+          portraits, and events?</li>
         <li>Can I see examples of the work before hiring? Is there a gallery organized by category?</li>
         <li>How can I get in touch to request a quote or book a photography session?</li>
-        <li>What is the photographer's visual style? Do the photos have a defined aesthetic, such as a film-like, warm, or dark tone?</li>
+        <li>What is the photographer's visual style? Do the photos have a defined aesthetic, such as a film-like, warm,
+          or dark tone?</li>
       </ul>
     </section>
 
@@ -491,7 +554,8 @@
     <section id="colors">
       <p class="section-label">04 — Palette</p>
       <h2>Color <em>Scheme</em></h2>
-      <p>The palette is built around the <strong>film/analog</strong> aesthetic — warm tones of aged photographic paper as the base, with two accent colors that evoke depth and emotion.</p>
+      <p>The palette is built around the <strong>film/analog</strong> aesthetic — warm tones of aged photographic paper
+        as the base, with two accent colors that evoke depth and emotion.</p>
       <div class="color-grid">
         <div class="color-item">
           <div class="color-swatch" style="background:#f5f0e8;"></div>
@@ -548,7 +612,8 @@
     <section id="typography">
       <p class="section-label">05 — Fonts</p>
       <h2>Typography</h2>
-      <p>Three typeface families were selected to create visual hierarchy and reinforce the analog, cinematic aesthetic of the site.</p>
+      <p>Three typeface families were selected to create visual hierarchy and reinforce the analog, cinematic aesthetic
+        of the site.</p>
       <div class="type-grid">
 
         <div class="type-item">
@@ -573,9 +638,11 @@
           <div class="type-meta">
             <p class="label">Body & UI</p>
             <p class="font-name">Courier Prime</p>
-            <p class="font-use">Regular — used for paragraphs, navigation, labels, badges, buttons, and interface text.</p>
+            <p class="font-use">Regular — used for paragraphs, navigation, labels, badges, buttons, and interface text.
+            </p>
           </div>
-          <div class="type-sample-courier">Every image tells a unique story, revealed frame by frame with care and artistic intention.</div>
+          <div class="type-sample-courier">Every image tells a unique story, revealed frame by frame with care and
+            artistic intention.</div>
         </div>
 
       </div>
@@ -585,7 +652,8 @@
     <section id="wireframe">
       <p class="section-label">06 — Layout</p>
       <h2>Wireframe — <em>Home Page</em></h2>
-      <p>Layout sketches for the home page (index.html) in mobile and desktop views. Hatched boxes represent images; horizontal lines represent text blocks.</p>
+      <p>Layout sketches for the home page (index.html) in mobile and desktop views. Hatched boxes represent images;
+        horizontal lines represent text blocks.</p>
 
       <div class="wireframe-grid">
 
@@ -596,9 +664,12 @@
             <div class="wf-block header-bar">nav + hamburger</div>
             <div class="wf-block hero-img">hero image</div>
             <div class="wf-block" style="padding:0.75rem;">
-              <div style="height:12px;background:var(--text);opacity:0.3;border-radius:1px;margin-bottom:6px;width:70%;margin-left:auto;margin-right:auto;"></div>
+              <div
+                style="height:12px;background:var(--text);opacity:0.3;border-radius:1px;margin-bottom:6px;width:70%;margin-left:auto;margin-right:auto;">
+              </div>
               <div style="height:6px;background:var(--text2);opacity:0.25;border-radius:1px;margin-bottom:4px;"></div>
-              <div style="height:6px;background:var(--text2);opacity:0.25;border-radius:1px;width:85%;margin:0 auto;"></div>
+              <div style="height:6px;background:var(--text2);opacity:0.25;border-radius:1px;width:85%;margin:0 auto;">
+              </div>
             </div>
             <div class="wf-block btn-row">
               <div class="wf-btn"></div>
@@ -618,7 +689,8 @@
               <div style="height:6px;background:var(--text2);opacity:0.25;border-radius:1px;margin-bottom:4px;"></div>
               <div style="height:6px;background:var(--text2);opacity:0.25;border-radius:1px;width:80%;"></div>
             </div>
-            <div class="wf-block footer-bar" style="display:flex;align-items:center;justify-content:center;font-size:0.55rem;">footer</div>
+            <div class="wf-block footer-bar"
+              style="display:flex;align-items:center;justify-content:center;font-size:0.55rem;">footer</div>
           </div>
         </div>
 
@@ -645,7 +717,9 @@
                   <div style="height:14px;width:50px;border:1px solid var(--green);border-radius:2px;"></div>
                 </div>
               </div>
-              <div style="background:repeating-linear-gradient(45deg,var(--border),var(--border) 1px,transparent 1px,transparent 8px);border-radius:2px;min-height:80px;"></div>
+              <div
+                style="background:repeating-linear-gradient(45deg,var(--border),var(--border) 1px,transparent 1px,transparent 8px);border-radius:2px;min-height:80px;">
+              </div>
             </div>
             <div class="wf-block" style="padding:0.4rem;font-size:0.55rem;">featured photos — 3-column grid</div>
             <div class="wf-block card-row" style="height:90px;">
@@ -655,7 +729,9 @@
             </div>
             <div class="wf-block" style="padding:0.4rem;font-size:0.55rem;">about the photographer — two columns</div>
             <div class="wf-desktop-two-col" style="padding:0.75rem;">
-              <div style="background:repeating-linear-gradient(45deg,var(--border),var(--border) 1px,transparent 1px,transparent 8px);border-radius:2px;min-height:70px;"></div>
+              <div
+                style="background:repeating-linear-gradient(45deg,var(--border),var(--border) 1px,transparent 1px,transparent 8px);border-radius:2px;min-height:70px;">
+              </div>
               <div class="wf-text-lines">
                 <div class="wf-line title"></div>
                 <div class="wf-line"></div>
@@ -663,7 +739,8 @@
                 <div class="wf-line short"></div>
               </div>
             </div>
-            <div class="wf-block footer-bar" style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0.75rem;font-size:0.55rem;">
+            <div class="wf-block footer-bar"
+              style="display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0.75rem;font-size:0.55rem;">
               <span>logo</span><span>links</span><span>credits</span>
             </div>
           </div>
@@ -679,4 +756,5 @@
   </footer>
 
 </body>
+
 </html>

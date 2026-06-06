@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the best of Brasília — landmarks, parks, culture, and attractions that make our city a great place to live and do business." />
+  <meta name="author" content="Wellinton Allan Gobbi" />
+  <title>Discover Brasília | Chamber of Commerce</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Discover Brasília | Chamber of Commerce" />
+  <meta property="og:description" content="Explore the landmarks, culture, and attractions that make Brasília a great place to live and do business." />
+  <meta property="og:image"       content="https://wellintongobbi.github.io/wdd231/chamber/images/og-chamber.jpg" />
+  <meta property="og:url"         content="https://wellintongobbi.github.io/wdd231/chamber/discover.html" />
+  <meta property="og:site_name"   content="Chamber of Commerce" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="images/favicon.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="stylesheet" href="styles/discover.css" />
+
+  <!-- JS module -->
+  <script src="scripts/discover.js" type="module" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ═══════════════ HEADER ═══════════════ -->
+  <header id="site-header">
+    <div class="header-branding">
+      <img class="header-logo" src="images/favicon.svg" alt="Chamber of Commerce logo" width="70" height="70" />
+      <div class="header-title">
+        <h1>Chamber of Commerce</h1>
+        <p>Business &amp; Professional Association</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav id="site-nav" aria-label="Main navigation">
+    <button class="nav-toggle" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+      Menu
+      <div class="hamburger" aria-hidden="true"><span></span><span></span><span></span></div>
+    </button>
+    <ul class="nav-menu" id="main-menu" role="menubar">
+      <li role="none"><a href="index.html"     role="menuitem">Home</a></li>
+      <li role="none"><a href="directory.html" role="menuitem">Directory</a></li>
+      <li role="none"><a href="join.html"      role="menuitem">Join</a></li>
+      <li role="none"><a href="discover.html"  role="menuitem" class="active" aria-current="page">Discover</a></li>
+      <li role="none"><a href="contact.html"   role="menuitem">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════ MAIN ═══════════════ -->
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="page-hero" aria-labelledby="discover-title">
+      <h2 id="discover-title">Discover Brasília</h2>
+      <p>Explore the landmarks, culture, and nature that make our city extraordinary</p>
+    </section>
+
+    <!-- Visitor message (localStorage) -->
+    <div id="visitor-message" class="visitor-banner" role="status" aria-live="polite" hidden>
+      <span id="visitor-text"></span>
+      <button class="visitor-close" aria-label="Dismiss message">&times;</button>
+    </div>
+
+    <!-- Demographics sidebar + cards grid -->
+    <div class="discover-layout">
+
+      <!-- Sidebar: city facts -->
+      <aside class="city-facts" aria-label="Brasília quick facts">
+        <h2>City at a Glance</h2>
+
+        <dl class="facts-list">
+          <div class="fact-item">
+            <dt>Population</dt>
+            <dd>3.1 million</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Founded</dt>
+            <dd>April 21, 1960</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Area</dt>
+            <dd>5,802 km²</dd>
+          </div>
+          <div class="fact-item">
+            <dt>UNESCO Site</dt>
+            <dd>Since 1987</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Avg. Temperature</dt>
+            <dd>21 °C / 70 °F</dd>
+          </div>
+          <div class="fact-item">
+            <dt>GDP per Capita</dt>
+            <dd>R$ 85,000</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Universities</dt>
+            <dd>80+</dd>
+          </div>
+          <div class="fact-item">
+            <dt>Architect</dt>
+            <dd>Oscar Niemeyer</dd>
+          </div>
+        </dl>
+
+        <div class="facts-cta">
+          <p>Thinking about expanding your business to Brasília?</p>
+          <a href="join.html" class="btn-cta" style="font-size:.85rem; padding:.6rem 1.2rem;">Join the Chamber</a>
+        </div>
+      </aside>
+
+      <!-- Attractions grid (populated by JS) -->
+      <section aria-labelledby="attractions-heading">
+        <h2 id="attractions-heading" class="sr-only">Points of Interest</h2>
+        <div id="attractions-grid" class="attractions-grid" aria-busy="true">
+          <!-- Cards injected by discover.js -->
+        </div>
+      </section>
+
+    </div><!-- /.discover-layout -->
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer id="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>Chamber of Commerce</h2>
+        <p>Strengthening the local business community since 1985.</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <address>
+          1000 Business Ave<br />
+          Downtown, Brasília – DF<br />
+          ZIP: 70040-010<br />
+          <a href="tel:+556133001234" style="color:rgba(255,255,255,.7);">(61) 3300-1234</a><br />
+          <a href="mailto:contact@chamberofcommerce.com" style="color:rgba(255,255,255,.7);">contact@chamberofcommerce.com</a>
+        </address>
+      </div>
+      <div class="footer-dev">
+        <h3>Development</h3>
+        <p>
+          <strong class="footer-gold">Wellinton Allan Gobbi</strong><br />
+          WDD 231 — Web Frontend Development I<br />
+          Last modified: <span id="last-modified"></span>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="copyright-year"></span> Chamber of Commerce. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

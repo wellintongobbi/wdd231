@@ -1,0 +1,288 @@
+/* ===========================
+   DISCOVER PAGE — discover.css
+   Named grid areas · 3 breakpoints · hover effects · visitor banner
+   =========================== */
+
+/* ---------- Screen-reader only ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Visitor banner ---------- */
+.visitor-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  background: linear-gradient(90deg, var(--color-primary) 0%, #2a5280 100%);
+  color: #fff;
+  padding: var(--space-sm) var(--space-lg);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.visitor-banner[hidden] {
+  display: none;
+}
+
+.visitor-close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: color var(--transition);
+}
+
+.visitor-close:hover {
+  color: #fff;
+}
+
+/* ---------- Discover page layout ---------- */
+.discover-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding: var(--space-lg) var(--space-md);
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ---------- City facts sidebar ---------- */
+.city-facts {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.city-facts h2 {
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-md);
+  border-bottom: 3px solid var(--color-secondary);
+  padding-bottom: var(--space-sm);
+  display: inline-block;
+}
+
+.facts-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+  margin: 0 0 var(--space-lg);
+}
+
+.fact-item {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  border-left: 3px solid var(--color-secondary);
+}
+
+.fact-item dt {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.fact-item dd {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.facts-cta {
+  background: var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+
+.facts-cta p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin: 0 0 var(--space-sm);
+}
+
+/* ---------- Attraction cards ---------- */
+.attraction-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.attraction-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-figure {
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-accent);
+  aspect-ratio: 3 / 2;
+}
+
+.card-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: none; /* no hover effect on mobile */
+}
+
+.card-content {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  flex: 1;
+}
+
+.card-content h2 {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.card-content address {
+  font-style: normal;
+  font-size: 0.76rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.card-content p {
+  font-size: 0.83rem;
+  color: var(--color-text-light);
+  line-height: 1.55;
+  margin: 0;
+  flex: 1;
+}
+
+.btn-learn-more {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: var(--space-sm);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 6px 16px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.btn-learn-more:hover {
+  background: var(--color-secondary);
+}
+
+/* ===========================================
+   SMALL SCREENS (320px – 640px)
+   Single column, cards stacked
+   =========================================== */
+.attractions-grid {
+  display: grid;
+  gap: var(--space-md);
+
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+
+  grid-template-columns: 1fr;
+}
+
+/* ===========================================
+   MEDIUM SCREENS (641px – 1024px)
+   2-column asymmetric layout
+   =========================================== */
+@media (min-width: 641px) {
+  .discover-layout {
+    padding: var(--space-xl);
+  }
+
+  .attractions-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1  card1"
+      "card2  card3"
+      "card4  card5"
+      "card6  card6"
+      "card7  card8";
+  }
+
+  /* Hover effect on images — medium+ only */
+  .card-figure img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+
+  .attraction-card:hover .card-figure img {
+    transform: scale(1.06);
+    filter: brightness(1.08) saturate(1.15);
+  }
+}
+
+/* ===========================================
+   LARGE SCREENS (1025px+)
+   3-column complex layout with named areas
+   =========================================== */
+@media (min-width: 1025px) {
+  .discover-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-xl);
+    padding: var(--space-xl) var(--space-2xl);
+  }
+
+  .city-facts {
+    width: 260px;
+    flex-shrink: 0;
+    position: sticky;
+    top: var(--space-md);
+  }
+
+  .facts-list {
+    grid-template-columns: 1fr;
+  }
+
+  .attractions-grid {
+    flex: 1;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1  card1  card2"
+      "card3  card4  card2"
+      "card5  card6  card7"
+      "card8  card8  card7";
+  }
+}
