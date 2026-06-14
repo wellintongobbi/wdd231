@@ -1,0 +1,121 @@
+
+.confirmation-main {
+  min-height: 100vh;
+  padding-top: var(--nav-height);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.confirmation-card {
+  max-width: 560px;
+  width: 100%;
+  margin: 3rem 1.5rem;
+  padding: 3.5rem 3rem;
+  background: var(--bg2);
+  border-radius: var(--radius-md);
+  border-top: 2px solid var(--wine);
+  text-align: center;
+  animation: modalSlideIn 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.confirmation-icon {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.confirmation-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.2;
+  margin: 0.5rem 0 1rem;
+}
+
+.confirmation-title em {
+  color: var(--wine);
+  font-style: italic;
+}
+
+.confirmation-desc {
+  font-size: 0.9rem;
+  color: var(--text2);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* ── DADOS DO FORMULÁRIO ── */
+.confirmation-data {
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  border: 0.5px solid var(--border);
+}
+
+.confirmation-data-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0.6rem 0;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.confirmation-data-item:last-child {
+  border-bottom: none;
+}
+
+.confirmation-data-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(107, 93, 79, 0.5);
+}
+
+.confirmation-data-value {
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+/* ── ACTIONS ── */
+.confirmation-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-outline-dark {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.5rem;
+  background: transparent;
+  color: var(--text2);
+  border: 0.5px solid var(--border-md);
+  border-radius: var(--radius-sm);
+  transition: opacity var(--transition);
+}
+
+.btn-outline-dark:hover { opacity: 0.7; }
+
+@media (max-width: 480px) {
+  .confirmation-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .confirmation-actions {
+    flex-direction: column;
+  }
+
+  .confirmation-actions a {
+    text-align: center;
+  }
+}

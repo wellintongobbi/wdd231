@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="amorae.mov — fotografia de casamentos por Flávia Ramos de Sousa. Momentos únicos capturados com olhar cinematográfico.">
+  <meta name="author" content="Flávia Ramos de Sousa">
+
+  <meta property="og:title" content="amorae.mov — Fotografia de Casamentos">
+  <meta property="og:description"
+    content="Momentos únicos capturados com olhar cinematográfico por Flávia Ramos de Sousa.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.jpg">
+
+  <title>amorae.mov — Fotografia de Casamentos</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Courier+Prime:ital@0;1&family=Playfair+Display:ital@1&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="index.html" class="nav-logo" aria-label="amorae.mov — página inicial">
+        amorae<span>.mov</span>
+      </a>
+
+      <ul class="nav-links-desktop" id="navMenu" role="list">
+        <li><a href="index.html" class="nav-link active" aria-current="page">início</a></li>
+        <li><a href="portfolio.html" class="nav-link">portfólio</a></li>
+        <li><a href="contact.html" class="nav-link">contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HAMBURGER -->
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenuMobile" aria-label="Abrir menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- MENU MOBILE -->
+  <ul class="nav-links-mobile" id="navMenuMobile" role="list" aria-label="Menu mobile">
+    <li><a href="index.html" class="nav-link-mobile active">início</a></li>
+    <li><a href="portfolio.html" class="nav-link-mobile">portfólio</a></li>
+    <li><a href="contact.html" class="nav-link-mobile">contato</a></li>
+  </ul>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Apresentação">
+      <div class="hero-media" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline poster="images/hero-poster.jpg" aria-hidden="true">
+          <source src="videos/hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-eyebrow">fotografia de casamentos</p>
+          <h1 class="hero-title">
+            momentos que<br>
+            <em>permanecem</em>
+          </h1>
+          <div class="hero-actions">
+            <a href="portfolio.html" class="btn btn-primary">ver portfólio</a>
+            <a href="contact.html" class="btn btn-outline">entrar em contato</a>
+          </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+          <div class="hero-scroll-line"></div>
+          <span>scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PHOTOS -->
+    <section class="featured" aria-label="Fotos em destaque">
+      <div class="featured-header">
+        <div>
+          <p class="label-small">seleção</p>
+          <h2 class="section-title">fotos em <em>destaque</em></h2>
+        </div>
+        <a href="portfolio.html" class="link-arrow" aria-label="Ver portfólio completo">
+          ver portfólio completo
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="gallery-grid" id="featuredGallery" aria-live="polite">
+        <p class="gallery-loading">Carregando fotos...</p>
+      </div>
+    </section>
+
+    <!-- CTA CONTACT -->
+    <section class="cta-section" aria-label="Chamada para contato">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <p class="label-small light">vamos conversar</p>
+          <h2 class="cta-title">
+            pronta para guardar<br>
+            a sua <em>história?</em>
+          </h2>
+          <p class="cta-desc">
+            Entre em contato com Flávia para agendar uma sessão ou tirar dúvidas sobre os serviços disponíveis.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-light">agendar sessão</a>
+          <a href="portfolio.html" class="btn btn-ghost">ver portfólio</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo" aria-label="amorae.mov — página inicial">
+        amorae<span>.mov</span>
+      </a>
+      <nav aria-label="Navegação do rodapé">
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">início</a></li>
+          <li><a href="portfolio.html">portfólio</a></li>
+          <li><a href="contact.html">contato</a></li>
+        </ul>
+      </nav>
+      <div class="footer-right">
+        <p class="footer-copy">&copy; <span id="footerYear"></span> amorae.mov</p>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="footer-video-link"
+          aria-label="Assistir demonstração em vídeo">
+          demonstração em vídeo
+        </a>
+      </div>
+      <p id="apiQuote">Carregando frase...</p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="photoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="modal-img-wrap">
+        <img id="modalImg" src="" alt="" loading="lazy">
+      </div>
+      <div class="modal-info">
+        <p class="modal-category" id="modalCategory"></p>
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <p class="modal-desc" id="modalDesc"></p>
+        <p class="modal-meta" id="modalMeta"></p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>

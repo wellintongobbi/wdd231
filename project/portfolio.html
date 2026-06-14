@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de fotografia de casamentos por Flávia Ramos de Sousa — amorae.mov. Momentos únicos capturados com olhar cinematográfico.">
+  <meta name="author" content="Flávia Ramos de Sousa">
+
+  <meta property="og:title" content="amorae.mov — Portfólio">
+  <meta property="og:description" content="Galeria de fotografia de casamentos por Flávia Ramos de Sousa.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.jpg">
+
+  <title>amorae.mov — Portfólio</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/portfolio.css">
+  <style>
+    .site-header { background: rgba(26, 18, 8, 0.97); border-bottom: 0.5px solid rgba(110, 61, 65, 0.3); }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Courier+Prime:ital@0;1&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="index.html" class="nav-logo" aria-label="amorae.mov — página inicial">
+        amorae<span>.mov</span>
+      </a>
+      <ul class="nav-links-desktop" id="navMenu" role="list">
+        <li><a href="index.html" class="nav-link">início</a></li>
+        <li><a href="portfolio.html" class="nav-link active" aria-current="page">portfólio</a></li>
+        <li><a href="contact.html" class="nav-link">contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HAMBURGER -->
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenuMobile" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- MENU MOBILE -->
+  <ul class="nav-links-mobile" id="navMenuMobile" role="list" aria-label="Menu mobile">
+    <li><a href="index.html" class="nav-link-mobile">início</a></li>
+    <li><a href="portfolio.html" class="nav-link-mobile active">portfólio</a></li>
+    <li><a href="contact.html" class="nav-link-mobile">contato</a></li>
+  </ul>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <section class="portfolio-header" aria-label="Cabeçalho do portfólio">
+      <div class="portfolio-header-inner">
+        <p class="label-small">trabalhos</p>
+        <h1 class="portfolio-title">portfólio</h1>
+        <p class="portfolio-subtitle">cada imagem, <em>uma história</em></p>
+        <p class="portfolio-count" id="photoCount" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- MASONRY GALLERY -->
+    <section class="portfolio-gallery" aria-label="Galeria de fotos">
+      <div class="masonry-grid" id="masonryGrid" aria-live="polite">
+        <p class="gallery-loading">Carregando galeria...</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="portfolio-cta" aria-label="Chamada para agendamento">
+      <div class="portfolio-cta-inner">
+        <p class="label-small light">gostou do que viu?</p>
+        <h2 class="portfolio-cta-title">vamos criar a sua <em>história?</em></h2>
+        <a href="contact.html" class="btn btn-primary">agendar sessão</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo" aria-label="amorae.mov — página inicial">
+        amorae<span>.mov</span>
+      </a>
+      <nav aria-label="Navegação do rodapé">
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">início</a></li>
+          <li><a href="portfolio.html">portfólio</a></li>
+          <li><a href="contact.html">contato</a></li>
+        </ul>
+      </nav>
+      <div class="footer-right">
+        <p class="footer-copy">&copy; <span id="footerYear"></span> amorae.mov</p>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="footer-video-link" aria-label="Assistir demonstração em vídeo">
+          demonstração em vídeo
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="photoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-img-wrap">
+        <img id="modalImg" src="" alt="" loading="lazy">
+      </div>
+      <div class="modal-info">
+        <p class="modal-category" id="modalCategory"></p>
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <p class="modal-desc" id="modalDesc"></p>
+        <p class="modal-meta" id="modalMeta"></p>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem;display:inline-block;">
+          agendar sessão
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/portfolio.js"></script>
+</body>
+</html>

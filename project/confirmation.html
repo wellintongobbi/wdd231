@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mensagem enviada com sucesso — amorae.mov">
+  <meta name="author" content="Flávia Ramos de Sousa">
+  <title>amorae.mov — Mensagem Enviada</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/confirmation.css">
+  <style>
+    /* Header sempre escuro nesta página — sem hero de vídeo */
+    .site-header { background: rgba(26, 18, 8, 0.97); border-bottom: 0.5px solid rgba(110, 61, 65, 0.3); }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Courier+Prime:ital@0;1&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="index.html" class="nav-logo">amorae<span>.mov</span></a>
+      <ul class="nav-links-desktop" role="list">
+        <li><a href="index.html" class="nav-link">início</a></li>
+        <li><a href="portfolio.html" class="nav-link">portfólio</a></li>
+        <li><a href="contact.html" class="nav-link">contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenuMobile" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links-mobile" id="navMenuMobile" role="list">
+    <li><a href="index.html" class="nav-link-mobile">início</a></li>
+    <li><a href="portfolio.html" class="nav-link-mobile">portfólio</a></li>
+    <li><a href="contact.html" class="nav-link-mobile">contato</a></li>
+  </ul>
+
+  <main class="confirmation-main">
+    <div class="confirmation-card">
+
+      <div class="confirmation-icon" aria-hidden="true">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="19" stroke="#6e3d41" stroke-width="1"/>
+          <path d="M12 20l6 6 10-12" stroke="#6e3d41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <p class="label-small" style="text-align:center;">mensagem enviada</p>
+      <h1 class="confirmation-title">obrigada pelo <em>contato!</em></h1>
+      <p class="confirmation-desc">
+        Flávia recebeu sua mensagem e entrará em contato em até 48 horas para confirmar disponibilidade e discutir os detalhes da sua sessão.
+      </p>
+
+      <div class="confirmation-data" id="confirmationData" aria-label="Resumo do formulário enviado">
+        <!-- Preenchido via JS com URLSearchParams -->
+      </div>
+
+      <div class="confirmation-actions">
+        <a href="index.html" class="btn btn-primary">voltar ao início</a>
+        <a href="portfolio.html" class="btn btn-outline-dark">ver portfólio</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo">amorae<span>.mov</span></a>
+      <nav aria-label="Navegação do rodapé">
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">início</a></li>
+          <li><a href="portfolio.html">portfólio</a></li>
+          <li><a href="contact.html">contato</a></li>
+        </ul>
+      </nav>
+      <div class="footer-right">
+        <p class="footer-copy">&copy; <span id="footerYear"></span> amorae.mov</p>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="footer-video-link">
+          demonstração em vídeo
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/confirmation.js"></script>
+</body>
+</html>

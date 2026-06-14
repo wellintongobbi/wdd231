@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato com Flávia Ramos de Sousa para agendar sua sessão fotográfica. Casamentos e ensaios em todo o Brasil.">
+  <meta name="author" content="Flávia Ramos de Sousa">
+
+  <meta property="og:title" content="amorae.mov — Contato & Agendamento">
+  <meta property="og:description" content="Agende sua sessão fotográfica com Flávia Ramos de Sousa.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.jpg">
+
+  <title>amorae.mov — Contato & Agendamento</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/contact.css">
+  <style>
+    .site-header { background: rgba(26, 18, 8, 0.97); border-bottom: 0.5px solid rgba(110, 61, 65, 0.3); }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Courier+Prime:ital@0;1&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="index.html" class="nav-logo" aria-label="amorae.mov — página inicial">
+        amorae<span>.mov</span>
+      </a>
+      <ul class="nav-links-desktop" id="navMenu" role="list">
+        <li><a href="index.html" class="nav-link">início</a></li>
+        <li><a href="portfolio.html" class="nav-link">portfólio</a></li>
+        <li><a href="contact.html" class="nav-link active" aria-current="page">contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HAMBURGER -->
+  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenuMobile" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- MENU MOBILE -->
+  <ul class="nav-links-mobile" id="navMenuMobile" role="list" aria-label="Menu mobile">
+    <li><a href="index.html" class="nav-link-mobile">início</a></li>
+    <li><a href="portfolio.html" class="nav-link-mobile">portfólio</a></li>
+    <li><a href="contact.html" class="nav-link-mobile active">contato</a></li>
+  </ul>
+
+  <main class="contact-main">
+
+    <div class="contact-wrapper">
+
+      <!-- INFO LATERAL -->
+      <aside class="contact-info" aria-label="Informações de contato">
+        <div class="contact-info-inner">
+          <p class="label-small">fale comigo</p>
+          <h1 class="contact-title">vamos criar algo <em>inesquecível</em></h1>
+          <p class="contact-desc">
+            Preencha o formulário ao lado e Flávia entrará em contato em até 48 horas para confirmar disponibilidade e discutir os detalhes da sua sessão.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <span class="contact-detail-label">e-mail</span>
+              <a href="mailto:flavia@amoraemov.com.br" class="contact-detail-value">
+                flavia@amoraemov.com.br
+              </a>
+            </div>
+            <div class="contact-detail-item">
+              <span class="contact-detail-label">instagram</span>
+              <a href="https://instagram.com/amoraemov" target="_blank" rel="noopener noreferrer" class="contact-detail-value">
+                @amoraemov
+              </a>
+            </div>
+            <div class="contact-detail-item">
+              <span class="contact-detail-label">localização</span>
+              <span class="contact-detail-value">Brasil — viagens a combinar</span>
+            </div>
+          </div>
+
+          <div class="contact-quote">
+            <p>"Cada sessão começa muito antes do obturador — começa na conversa."</p>
+            <span>— Flávia Ramos de Sousa</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- FORMULÁRIO -->
+      <section class="contact-form-section" aria-label="Formulário de contato">
+        <form
+          class="contact-form"
+          action="confirmation.html"
+          method="get"
+          id="contactForm"
+          novalidate
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">nome completo <span aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                placeholder="Seu nome"
+                required
+                autocomplete="name"
+                aria-required="true"
+              >
+              <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">e-mail <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                placeholder="seu@email.com"
+                required
+                autocomplete="email"
+                aria-required="true"
+              >
+              <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone" class="form-label">telefone / whatsapp <span aria-hidden="true">*</span></label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="form-input"
+                placeholder="(00) 00000-0000"
+                required
+                autocomplete="tel"
+                aria-required="true"
+              >
+              <span class="form-error" id="phoneError" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="session" class="form-label">tipo de sessão <span aria-hidden="true">*</span></label>
+              <select
+                id="session"
+                name="session"
+                class="form-input form-select"
+                required
+                aria-required="true"
+              >
+                <option value="" disabled selected>Selecione...</option>
+                <option value="casamento">Casamento</option>
+                <option value="pre-wedding">Pré-wedding</option>
+                <option value="ensaio-casal">Ensaio de casal</option>
+                <option value="ensaio-gestante">Ensaio gestante</option>
+                <option value="newborn">Newborn</option>
+                <option value="familia">Família</option>
+                <option value="outro">Outro</option>
+              </select>
+              <span class="form-error" id="sessionError" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="date" class="form-label">data desejada</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              class="form-input"
+              aria-describedby="dateHint"
+            >
+            <span class="form-hint" id="dateHint">Não tem data certa ainda? Deixe em branco.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">mensagem <span aria-hidden="true">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-input form-textarea"
+              placeholder="Conte um pouco sobre o que você imagina para a sua sessão..."
+              required
+              rows="5"
+              aria-required="true"
+            ></textarea>
+            <span class="form-error" id="messageError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-footer">
+            <p class="form-required-note"><span aria-hidden="true">*</span> campos obrigatórios</p>
+            <button type="submit" class="btn btn-submit">
+              enviar mensagem
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo" aria-label="amorae.mov — página inicial">
+        amorae<span>.mov</span>
+      </a>
+      <nav aria-label="Navegação do rodapé">
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">início</a></li>
+          <li><a href="portfolio.html">portfólio</a></li>
+          <li><a href="contact.html">contato</a></li>
+        </ul>
+      </nav>
+      <div class="footer-right">
+        <p class="footer-copy">&copy; <span id="footerYear"></span> amorae.mov</p>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="footer-video-link" aria-label="Assistir demonstração em vídeo">
+          demonstração em vídeo
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts/contact.js"></script>
+</body>
+</html>
